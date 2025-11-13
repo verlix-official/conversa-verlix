@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversa Verlix – Documentation</title>
+    <meta name="description"
+        content="Conversa Verlix AI Chat Tool Landing Page Documentation – Setup, Customize, and Deploy Instructions" />
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f9fafb;
+            color: #111827;
+            line-height: 1.7;
+            padding: 30px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #111827;
+            margin-top: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        code,
+        pre {
+            background: #f3f4f6;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            display: block;
+            overflow-x: auto;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul,
+        ol {
+            margin-left: 20px;
+        }
+
+        .note {
+            background: #fef3c7;
+            padding: 10px 15px;
+            border-left: 4px solid #f59e0b;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📘 Conversa Verlix – AI Chat Tool Landing Page</h1>
+    <p>
+        Thank you for purchasing <strong>Conversa Verlix</strong>!
+        This documentation will guide you step-by-step to set up, customize, and deploy your landing page efficiently.
+    </p>
+
+    <div class="section">
+        <h2>📦 Folder Structure</h2>
+        <pre>
+Conversa-Verlix/
+│
+├── app/
+│   ├── (pages)/                # All Next.js pages (Home, Demo, FAQ, Contact, etc.)
+│   ├── components/             # Reusable UI components
+│   └── layout.tsx              # App root layout
+│
+├── config/                     # 🔧 Main configuration folder
+│   ├── siteConfig.ts          # Global site settings (brand, logo, footer, etc.)
+│   ├── hero.ts                 # Hero section configuration
+│   ├── navbar.ts               # Navbar and links setup
+│   ├── footer.ts               # Footer configuration
+│   ├── faq.ts                  # FAQ section configuration
+│   ├── pricing.ts              # Pricing plans setup
+│   ├── reviews.ts              # Reviews and testimonials
+│   ├── usecases.ts             # Use cases configuration
+│   └── cookie.ts               # Cookie policy content
+│
+├── public/
+│   ├── images/                 # Images & icons
+│   ├── favicon.png             # Favicon
+│   └── preview.jpg             # ThemeForest preview thumbnail
+│
+├── README.md                   # Project documentation
+├── documentation.html           # HTML documentation (this file)
+├── LICENSE.txt                 # License information
+└── package.json                # Dependencies and scripts
+    </pre>
+        <div class="note">
+            ⚠️ Keep the folder structure intact for smooth deployment and ThemeForest approval.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>⚙️ How to Edit & Customize</h2>
+        <ol>
+            <li>Open the project folder in your preferred editor (<strong>VS Code</strong> recommended).</li>
+            <li>
+                Navigate to <code>/config/</code> folder — this is the heart of customization.
+                You can update everything such as brand name, logo, colors, links, footer, and all section contents
+                directly here.
+            </li>
+            <li>
+                The file <code>siteConfig.ts</code> acts as the main parent config file which controls all other config
+                files.
+            </li>
+            <li>
+                Replace text, images, and YouTube video links from <code>/config/</code> or <code>/public/images/</code>
+                as required.
+            </li>
+            <li>
+                Update YouTube demo link directly inside the hero section configuration — video is loaded
+                <strong>directly from YouTube</strong>, not from local files.
+            </li>
+        </ol>
+        <div class="note">
+            💡 You can fully customize the entire site — every section, color, text, and image — via the config system
+            without touching core code.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🎨 Customization Tips</h2>
+        <ul>
+            <li>Edit the <code>hero.ts</code> file to update hero heading, subtext, button labels, and demo video.</li>
+            <li>Use <code>navbar.ts</code> to add, remove, or rename navigation links.</li>
+            <li>Modify <code>footer.ts</code> for copyright text and footer links.</li>
+            <li>Update pricing details inside <code>pricing.ts</code>.</li>
+            <li>All texts, icons, and lists in the landing page are directly editable in their respective config files.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🚀 Running & Deployment</h2>
+        <ol>
+            <li>Install dependencies:
+                <code>npm install</code>
+            </li>
+            <li>Run development server:
+                <code>npm run dev</code>
+                Access at <a href="http://localhost:3000" target="_blank">http://localhost:3000</a>
+            </li>
+            <li>Build for production:
+                <code>npm run build</code>
+            </li>
+            <li>Start production server:
+                <code>npm start</code>
+            </li>
+            <li>Deploy easily on <strong>Vercel</strong> or any Node.js-supported hosting.</li>
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>📜 Credits</h2>
+        <ul>
+            <li>Framework: <a href="https://nextjs.org" target="_blank">Next.js</a></li>
+            <li>UI Library: <a href="https://ui.shadcn.com" target="_blank">shadcn/ui</a></li>
+            <li>Animations: <a href="https://www.framer.com/motion/" target="_blank">Framer Motion</a></li>
+            <li>Styling: <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a></li>
+            <li>Icons: <a href="https://lucide.dev/" target="_blank">Lucide Icons</a></li>
+            <li>Font: Google Fonts – <strong>Poppins</strong></li>
+            <li>Demo video: <strong>Directly embedded from YouTube</strong></li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📝 Notes & Recommendations</h2>
+        <ul>
+            <li>Replace all demo content before ThemeForest submission.</li>
+            <li>Keep a clean and organized folder structure.</li>
+            <li>Test each route and section before deployment.</li>
+            <li>All configurations are modular — edit freely without affecting core files.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>📧 Support</h2>
+        <p>
+            <strong>Author:</strong> Verlix Official<br />
+            <strong>Email:</strong> verlixdev@gmail.com
+        </p>
+        <div class="note">
+            ⚠️ Update contact info if you rebrand or resell under your own identity.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>🌐 SEO & Performance Tips</h2>
+        <ul>
+            <li>Update meta tags and Open Graph data for better SEO.</li>
+            <li>Compress and optimize all images.</li>
+            <li>Use descriptive alt texts for accessibility.</li>
+            <li>Test performance using Google PageSpeed Insights or Lighthouse.</li>
+        </ul>
+    </div>
+
+    <p style="text-align:center; margin-top:50px;">
+        © 2025 Verlix Official. All rights reserved.
+    </p>
+</body>
+
+</html>

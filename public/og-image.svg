@@ -1,0 +1,12 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <rect width="1200" height="630" fill="#111"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+    font-family="Poppins, Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff">
+    Conversa
+  </text>
+  <text x="50%" y="65%" text-anchor="middle"
+    font-family="Arial" font-size="32" fill="#bbbbbb">
+    AI Chat Tool
+  </text>
+</svg>

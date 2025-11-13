@@ -1,0 +1,72 @@
+{
+  "version": 0.1,
+  "name": "conversa-verlix",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/site-map"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_APP_NAME": "Conversa Verlix",
+    "NEXT_PUBLIC_SITE_URL": "https://conversa-verlix.vercel.app",
+    "NEXT_PUBLIC_SUPPORT_EMAIL": "verlixdev@gmail.com",
+    "NEXT_PUBLIC_AUTHOR_NAME": "Verlix Official"
+  },
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=()"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "api/**/*.ts": {
+      "memory": 256,
+      "maxDuration": 15
+    }
+  },
+  "github": {
+    "silent": true
+  }
+}
